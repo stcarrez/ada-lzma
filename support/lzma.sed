@@ -12,6 +12,13 @@ s/lzma_vli_h/Lzma.Vli/g
 s/lzma_container_h/Lzma.Container/g
 s/lzma_stream_flags_h/Lzma.StreamFlags/g
 s/lzma_reserved_enum/lzma_reserved_enum_type/g
+s/--  unsupported macro: LZMA_PRESET_DEFAULT UINT32_C(6)/LZMA_PRESET_DEFAULT : constant Interfaces.C.unsigned := 6;/g
+s/--  unsupported macro: LZMA_PRESET_LEVEL_MASK UINT32_C(0x1F)/LZMA_PRESET_LEVEL_MASK : constant Interfaces.C.unsigned := 16#1F#;/g
+s/--  unsupported macro: LZMA_PRESET_EXTREME (UINT32_C(1) << 31)/LZMA_PRESET_EXTREME : constant Interfaces.C.unsigned := 16#80000000#;/g
+s/--  unsupported macro: LZMA_TELL_NO_CHECK UINT32_C(0x01)/LZMA_TELL_NO_CHECK : constant Interfaces.C.unsigned := 1;/g
+s/--  unsupported macro: LZMA_TELL_UNSUPPORTED_CHECK UINT32_C(0x02)/LZMA_TELL_UNSUPPORTED_CHECK : constant Interfaces.C.unsigned := 2;/g
+s/--  unsupported macro: LZMA_TELL_ANY_CHECK UINT32_C(0x04)/LZMA_TELL_ANY_CHECK : constant Interfaces.C.unsigned := 4;/g
+s/--  unsupported macro: LZMA_CONCATENATED UINT32_C(0x08)/LZMA_CONCATENATED : constant Interfaces.C.unsigned := 8;/g
 s/\t/ /g
 s/ *$//g
 /lzma_block_header/ b skip
