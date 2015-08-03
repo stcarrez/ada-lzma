@@ -120,8 +120,8 @@ test:	build
 	@-rm -f test.tar test.tar.xz
 
 # Files to package in source distribution
-DISTFILES=README LICENSE NEWS config.guess configure config.sub \
-configure.ac Makefile.in install-sh \
+DISTFILES=README.md LICENSE NEWS config.guess configure config.sub \
+aclocal.m4 configure.ac Makefile.in install-sh \
 lzma.gpr.in lzma_tests.gpr.in samples.gpr config.gpr \
 src samples regtests support \
 distrib
