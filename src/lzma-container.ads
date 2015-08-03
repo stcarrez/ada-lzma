@@ -10,13 +10,13 @@ limited with lzma_lzma_h;
 
 package Lzma.Container is
 
-   --  unsupported macro: LZMA_PRESET_DEFAULT UINT32_C(6)
-   --  unsupported macro: LZMA_PRESET_LEVEL_MASK UINT32_C(0x1F)
-   --  unsupported macro: LZMA_PRESET_EXTREME (UINT32_C(1) << 31)
-   --  unsupported macro: LZMA_TELL_NO_CHECK UINT32_C(0x01)
-   --  unsupported macro: LZMA_TELL_UNSUPPORTED_CHECK UINT32_C(0x02)
-   --  unsupported macro: LZMA_TELL_ANY_CHECK UINT32_C(0x04)
-   --  unsupported macro: LZMA_CONCATENATED UINT32_C(0x08)
+   LZMA_PRESET_DEFAULT : constant Interfaces.C.unsigned := 6;
+   LZMA_PRESET_LEVEL_MASK : constant Interfaces.C.unsigned := 16#1F#;
+   LZMA_PRESET_EXTREME : constant Interfaces.C.unsigned := 16#80000000#;
+   LZMA_TELL_NO_CHECK : constant Interfaces.C.unsigned := 1;
+   LZMA_TELL_UNSUPPORTED_CHECK : constant Interfaces.C.unsigned := 2;
+   LZMA_TELL_ANY_CHECK : constant Interfaces.C.unsigned := 4;
+   LZMA_CONCATENATED : constant Interfaces.C.unsigned := 8;
   --*
   -- * \file        lzma/container.h
   -- * \brief       File formats
