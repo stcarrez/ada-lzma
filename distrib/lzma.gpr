@@ -1,0 +1,14 @@
+library project Lzma is
+   for Library_Name use "ada_lzma";
+   for Library_Dir use "LIB_INSTALL/";
+   for Library_Kind use "LIBRARY_TYPE";
+
+   for Source_Dirs use ("INCLUDE_INSTALL" & "/ada-lzma");
+   for Library_ALI_Dir use "ALI_INSTALL" & "/ada-lzma/";
+   for Externally_Built use "true";
+
+   package Linker is
+      for Linker_Options use ("-llzma");
+   end Linker;
+
+end Lzma;
