@@ -2,7 +2,7 @@ Ada LZMA Library Binding
 
 This is a small Ada05 library binding for the liblzma library.
 
-# About liblzma
+## About liblzma
 
 liblzma is a public domain general-purpose data compression library with
 a zlib-like API.
@@ -14,20 +14,19 @@ is developed and maintained by Lasse Collin.
 Major parts of liblzma are based on Igor Pavlov's public domain LZMA SDK
 <http://7-zip.org/sdk.html>.
 
-Building ada-lzma
-=================
+## Building ada-lzma
+
 Build with the following commands:
 
   ./configure
   make
 
-Installation
-============
+## Installation
 
   make install
 
-How to use Ada LZMA
-===================
+## How to use Ada LZMA
+
 Two examples are provided to illustrate how to use the library.
 Look at these examples for the details on how to use some of the operations.
 
