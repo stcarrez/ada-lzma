@@ -13,7 +13,6 @@ Makefile
 lzma.gpr
 *.xml
 autom4te.cache
-distrib/lzma.gpr
 *.txt
 lib/
 obj/
