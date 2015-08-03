@@ -3,7 +3,7 @@ with "lzma";
 
 project Samples is
 
-   Mains := ("compress_easy.adb");
+   Mains := ("compress_easy.adb", "decompress.adb");
 
    for Main use Mains;
 
