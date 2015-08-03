@@ -59,6 +59,8 @@ AC_CHECK_HEADERS(lzma.h)
 
 AC_CHECK_LIB(lzma,lzma_code,[LIBS="$LIBS -lzma"])
 
+AM_GNAT_CHECK_INSTALL
+
 AC_OUTPUT(
 Makefile
 lzma.gpr
