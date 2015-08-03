@@ -163,7 +163,12 @@ install_lib:
 	$(MKDIR) -p ${projectdir}/
 	${MKDIR} -p ${alidir}/ada-lzma ${bindir}
 	${CP} -p src/*.ad[bs] ${includedir}/ada-lzma
-	sed -e "s,LIBRARY_TYPE,$(LZMA_LIBRARY_TYPE),g" < distrib/lzma.gpr > ${projectdir}/lzma.gpr
+	sed -e "s,LIBRARY_TYPE,$(LZMA_LIBRARY_TYPE),g" \
+	    -e "s,ALI_INSTALL,${alidir},g" \
+	    -e "s,LIB_INSTALL,${libdir},g" \
+	    -e "s,BIN_INSTALL,${bindir},g" \
+	    -e "s,INCLUDE_INSTALL,${includedir},g" \
+	  < distrib/lzma.gpr > ${projectdir}/lzma.gpr
 	${CP} -p lib/$(LZMA_LIBRARY_TYPE)/*.ali ${alidir}/ada-lzma/
 ifeq ($(LZMA_LIBRARY_TYPE),static)
 	${CP} lib/$(LZMA_LIBRARY_TYPE)/$(libname).a ${libdir}/
