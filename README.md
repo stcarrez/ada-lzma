@@ -35,26 +35,26 @@ samples/decompress.adb shows hoz to decompress a stream.
 
 Roughtfly speaking, import some package:
 
-  with Lzma.Base;
-  with Lzma.Container;
-  with Lzma.Check;
+    with Lzma.Base;
+    with Lzma.Container;
+    with Lzma.Check;
 
 Then declare the LZMA stream:
 
-   Stream  : aliased Lzma.Base.lzma_stream := Lzma.Base.LZMA_STREAM_INIT;
+    Stream  : aliased Lzma.Base.lzma_stream := Lzma.Base.LZMA_STREAM_INIT;
 
 Initialize the LZMA stream as decoder (or as encoder):
 
-   Result := Lzma.Container.lzma_stream_decoder (Stream'Unchecked_Access,
-                                                 Long_Long_Integer'Last,
-                                                 Lzma.Container.LZMA_CONCATENATED);
+    Result := Lzma.Container.lzma_stream_decoder (Stream'Unchecked_Access,
+                                                  Long_Long_Integer'Last,
+                                                  Lzma.Container.LZMA_CONCATENATED);
 
 Setup the stream 'next_out', 'avail_out', 'next_in' and 'avail_in' and call
 the lzma_code operation with the action (Lzma.Base.LZMA_RUN or Lzma.Base.LZMA_FINISH):
 
-   Result := Lzma.Base.lzma_code (Stream'Unchecked_Access, Action);
+    Result := Lzma.Base.lzma_code (Stream'Unchecked_Access, Action);
 
 Close the LZMA stream:
 
-   Lzma.Base.lzma_end (Stream'Unchecked_Access);
+    Lzma.Base.lzma_end (Stream'Unchecked_Access);
 
