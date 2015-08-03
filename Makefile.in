@@ -113,8 +113,11 @@ rebuild: clean build
 
 # Build and run the unit tests
 test:	build
-	$(GNATMAKE) -p -Plzma_tests
-	bin/lzma_harness -xml lzma-aunit.xml
+	tar --exclude=test.tar -cf test.tar . && \
+	bin/compress_easy test.tar test.tar.xz && \
+	bin/decompress test.tar.xz test-res.tar && \
+	cmp test.tar test-res.tar && echo "Compression and decompression is OK"
+	@-rm -f test.tar test.tar.xz
 
 # Files to package in source distribution
 DISTFILES=README LICENSE NEWS config.guess configure config.sub \
