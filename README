@@ -2,8 +2,7 @@ Ada LZMA Library Binding
 
 This is a small Ada05 library binding for the liblzma library.
 
-About liblzma
-=============
+# About liblzma
 
 liblzma is a public domain general-purpose data compression library with
 a zlib-like API.
