@@ -57,7 +57,15 @@ AC_SUBST(NR_CPUS)
 
 AC_CHECK_HEADERS(lzma.h)
 
-AC_CHECK_LIB(lzma,lzma_code,[LIBS="$LIBS -lzma"])
+lzma_ok=0
+AC_CHECK_LIB(lzma,lzma_code,[LIBS="$LIBS -lzma"
+  lzma_ok=1])
+if test $lzma_ok -eq 0; then
+  AC_MSG_ERROR([The liblzma library was not found.  You should compile or install it.
+  You can download the liblzma from http://tukaani.org/xz/
+  Under Debian systems, you can install it using
+    sudo apt-get install liblzma-dev])
+fi
 
 AM_GNAT_CHECK_INSTALL
 
