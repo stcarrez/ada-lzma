@@ -16,6 +16,15 @@ Major parts of liblzma are based on Igor Pavlov's public domain LZMA SDK
 
 ## Building ada-lzma
 
+Before you build the package you must install the `liblzma` library.
+The installation of `liblzma` depends on your system:
+
+| Ubuntu & Debian  | `sudo apt-get install liblzma-dev`
+| Fedora           | `sudo yum install xz-devel`
+| NetBSD           | *pre installed (contrib/xz)*
+| FreeBSD          | *pre installed (contrib/xz)*
+| Source           | http://tukaani.org/xz/
+
 Build with the following commands:
 
   ./configure
@@ -33,7 +42,7 @@ Look at these examples for the details on how to use some of the operations.
 samples/compress_easy.adb is an example on how to compress some stream.
 samples/decompress.adb shows hoz to decompress a stream.
 
-Roughtfly speaking, import some package:
+Roughly speaking, import some package:
 
     with Lzma.Base;
     with Lzma.Container;
