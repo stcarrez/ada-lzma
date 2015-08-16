@@ -29,12 +29,15 @@ The installation of `liblzma` depends on your system:
 
 Build with the following commands:
 
-  ./configure
-  make
+    ./configure
+    make
 
 ## Installation
 
-  make install
+The installation is done with `gprinstall` if the configure script found it or
+by traditional copy.  In all cases, you should install with the next command:
+
+    make install
 
 ## How to use Ada LZMA
 
