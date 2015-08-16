@@ -19,11 +19,13 @@ Major parts of liblzma are based on Igor Pavlov's public domain LZMA SDK
 Before you build the package you must install the `liblzma` library.
 The installation of `liblzma` depends on your system:
 
+| System           | Install with
+|------------------|---------------------------
 | Ubuntu & Debian  | `sudo apt-get install liblzma-dev`
 | Fedora           | `sudo yum install xz-devel`
 | NetBSD           | *pre installed (contrib/xz)*
 | FreeBSD          | *pre installed (contrib/xz)*
-| Source           | http://tukaani.org/xz/
+| Source           | See http://tukaani.org/xz/
 
 Build with the following commands:
 
