@@ -1,8 +1,8 @@
+# Ada LZMA Library Binding
+
 [![Build Status](https://img.shields.io/jenkins/s/http/jenkins.vacs.fr/Ada-LZMA.svg)](http://jenkins.vacs.fr/job/Ada-LZMA/)
 [![License](http://img.shields.io/:license-mit-blue.svg)](LICENSE)
 [![Download](https://img.shields.io/badge/download-1.0.0-brightgreen.svg)](http://download.vacs.fr/ada-lzma/ada-lzma-1.0.0.tar.gz)
-
-Ada LZMA Library Binding
 
 This is a small Ada05 library binding for the liblzma library.
 
