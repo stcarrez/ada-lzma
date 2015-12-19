@@ -1,3 +1,5 @@
+[![Jenkins](https://img.shields.io/jenkins/s/http/jenkins.vacs.fr/Ada-LZMA.svg)]()
+
 Ada LZMA Library Binding
 
 This is a small Ada05 library binding for the liblzma library.
