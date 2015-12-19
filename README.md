@@ -1,5 +1,5 @@
 [![Build Status](https://img.shields.io/jenkins/s/http/jenkins.vacs.fr/Ada-LZMA.svg)](http://jenkins.vacs.fr/job/Ada-LZMA/)
-[![License](http://img.shields.io/badge/license-APACHE2-blue.svg)](LICENSE)
+[![License](http://img.shields.io/:license-mit-blue.svg)](LICENSE)
 
 Ada LZMA Library Binding
 
