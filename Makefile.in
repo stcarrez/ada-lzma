@@ -69,7 +69,7 @@ GPR_SAMPLES=samples.gpr
 
 ifeq (${BUILDS_SHARED},yes)
 all:     static shared
-install: install_static install_shared install-info
+install: install_shared install_static install-info
 else
 all:     static
 install: install_static install-info
