@@ -1,7 +1,7 @@
 dnl Autoconf configure script for ada-lzma
 dnl The MIT License (MIT)
 dnl 
-dnl Copyright (c) 2015 Stephane Carrez
+dnl Copyright (c) 2015, 2018 Stephane Carrez
 dnl 
 dnl Permission is hereby granted, free of charge, to any person obtaining a copy
 dnl of this software and associated documentation files (the "Software"), to deal
@@ -66,6 +66,13 @@ if test $lzma_ok -eq 0; then
   Under Debian systems, you can install it using
     sudo apt-get install liblzma-dev])
 fi
+
+##########################################
+# Check to enable/disable shared library
+##########################################
+AM_SHARED_LIBRARY_SUPPORT
+AM_DISTRIB_SUPPORT
+AM_COVERAGE_SUPPORT
 
 AM_GNAT_CHECK_INSTALL
 
