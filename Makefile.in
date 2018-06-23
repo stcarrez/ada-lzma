@@ -32,6 +32,8 @@ LIBEXT=so
 LIBVER=so.$(version)
 endif
 
+DESTDIR=
+
 srcdir = .
 top_srcdir = @top_srcdir@
 VPATH = @srcdir@
@@ -160,30 +162,30 @@ install_shared:
 
 install_lib:
 ifneq (${GPRINSTALL},)
-	$(GPRINSTALL) -p -f --prefix=${prefix} $(MAKE_ARGS) \
+	$(GPRINSTALL) -p -f --prefix=$(DESTDIR)${prefix} $(MAKE_ARGS) \
 		--build-name=$(LZMA_LIBRARY_TYPE) $(GPRPATH)
 else
-	$(MKDIR) -p ${includedir}/ada-lzma
-	$(MKDIR) -p ${projectdir}/
-	${MKDIR} -p ${alidir}/ada-lzma ${bindir}
-	${CP} -p src/*.ad[bs] ${includedir}/ada-lzma
+	$(MKDIR) -p $(DESTDIR)${includedir}/ada-lzma
+	$(MKDIR) -p $(DESTDIR)${projectdir}/
+	${MKDIR} -p $(DESTDIR)${alidir}/ada-lzma $(DESTDIR)${bindir}
+	${CP} -p src/*.ad[bs] $(DESTDIR)${includedir}/ada-lzma
 	sed -e "s,LIBRARY_TYPE,$(LZMA_LIBRARY_TYPE),g" \
 	    -e "s,ALI_INSTALL,${alidir},g" \
 	    -e "s,LIB_INSTALL,${libdir},g" \
 	    -e "s,BIN_INSTALL,${bindir},g" \
 	    -e "s,INCLUDE_INSTALL,${includedir},g" \
-	  < distrib/lzma.gpr > ${projectdir}/lzma.gpr
-	${CP} -p lib/$(LZMA_LIBRARY_TYPE)/*.ali ${alidir}/ada-lzma/
+	  < distrib/lzma.gpr > $(DESTDIR)${projectdir}/lzma.gpr
+	${CP} -p lib/$(LZMA_LIBRARY_TYPE)/*.ali $(DESTDIR)${alidir}/ada-lzma/
 ifeq ($(LZMA_LIBRARY_TYPE),static)
-	${CP} lib/$(LZMA_LIBRARY_TYPE)/$(libname).a ${libdir}/
+	${CP} lib/$(LZMA_LIBRARY_TYPE)/$(libname).a $(DESTDIR)${libdir}/
 else
-	${CP} -p lib/$(LZMA_LIBRARY_TYPE)/$(libname).$(LIBVER) ${libdir}/
+	${CP} -p lib/$(LZMA_LIBRARY_TYPE)/$(libname).$(LIBVER) $(DESTDIR)${libdir}/
 ifneq (${OS},Windows_NT)
 	cd ${libdir} && \
-	   rm -f $(libname).$(LIBEXT) && \
-	   ${LN} $(libname).$(LIBVER) $(libname).$(LIBEXT)
+	   rm -f $(DESTDIR)$(libname).$(LIBEXT) && \
+	   ${LN} $(libname).$(LIBVER) $(DESTDIR)$(libname).$(LIBEXT)
 else
-	${CP} -p lib/$(LZMA_LIBRARY_TYPE)/$(libname).$(LIBVER) ${bindir}/
+	${CP} -p lib/$(LZMA_LIBRARY_TYPE)/$(libname).$(LIBVER) $(DESTDIR)${bindir}/
 endif
 endif
 endif
@@ -198,20 +200,20 @@ install-info:
 	@echo "  export ADA_PROJECT_PATH=${projectdir}:$$ADA_PROJECT_PATH"
 
 install_samples:
-	$(MKDIR) -p $(samplesdir)/samples
-	cp -rp $(srcdir)/samples/*.ad[sb] $(samplesdir)/samples/
-	cp -p $(srcdir)/samples.gpr $(samplesdir)
-	cp -p $(srcdir)/config.gpr $(samplesdir)
+	$(MKDIR) -p $(DESTDIR)$(samplesdir)/samples
+	cp -rp $(srcdir)/samples/*.ad[sb] $(DESTDIR)$(samplesdir)/samples/
+	cp -p $(srcdir)/samples.gpr $(DESTDIR)$(samplesdir)
+	cp -p $(srcdir)/config.gpr $(DESTDIR)$(samplesdir)
 
 uninstall:
 ifneq (${GPRINSTALL},)
-	-$(GPRINSTALL) -f --prefix=${prefix} $(MAKE_ARGS) \
+	-$(GPRINSTALL) -f --prefix=$(DESTDIR)${prefix} $(MAKE_ARGS) \
 		--uninstall $(GPRPATH)
 else
-	rm -rf ${includedir}/ada-lzma
-	rm -rf ${alidir}/ada-lzma
-	rm -f ${libdir}/$(libname).a
-	rm -f ${libdir}/$(libname)l.$(LIBEXT)
-	rm -f ${projectdir}/lzma.gpr
+	rm -rf $(DESTDIR)${includedir}/ada-lzma
+	rm -rf $(DESTDIR)${alidir}/ada-lzma
+	rm -f $(DESTDIR)${libdir}/$(libname).a
+	rm -f $(DESTDIR)${libdir}/$(libname)l.$(LIBEXT)
+	rm -f $(DESTDIR)${projectdir}/lzma.gpr
 endif
 
