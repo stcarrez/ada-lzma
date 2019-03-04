@@ -9,8 +9,8 @@ CHANGES
 ChangeLog
 .settings
 configure.lineno
-Makefile
-lzma.gpr
+Makefile.conf
+lzmada.gpr
 *.xml
 autom4te.cache
 *.txt
