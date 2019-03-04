@@ -26,20 +26,11 @@ dnl Process this file with autoconf to produce a configure script.
 AC_INIT([ada-lzma], [1.0])
 AC_CONFIG_SRCDIR([src/lzma.ads])
 
-AC_CANONICAL_SYSTEM
-
 # Current release settings
 LZMA_MAJOR_VERSION=1
-LZMA_MINOR_VERSION=0
-LZMA_MICRO_VERSION=1
+LZMA_MINOR_VERSION=1
+LZMA_MICRO_VERSION=0
 LZMA_VERSION=$LZMA_MAJOR_VERSION.$LZMA_MINOR_VERSION.$LZMA_MICRO_VERSION
-
-AC_CHECK_PROGS(GNATMAKE, gnatmake, "")
-
-# checking for local tools
-AC_PROG_MAKE_SET
-AC_PROG_INSTALL
-AC_PROG_LN_S
 
 # Set the version number of GtkAda
 AC_SUBST(LZMA_VERSION)
@@ -47,13 +38,10 @@ AC_SUBST(LZMA_MAJOR_VERSION)
 AC_SUBST(LZMA_MINOR_VERSION)
 AC_SUBST(LZMA_MICRO_VERSION)
 
+AM_GNAT_LIBRARY_PROJECT(lzmada)
+
 EXEC_PREFIX="$prefix"
 AC_SUBST(EXEC_PREFIX)
-
-AC_MSG_CHECKING([number of processors])
-NR_CPUS=`getconf _NPROCESSORS_CONF 2>/dev/null || getconf _NPROCESSORS_CONF 2>/dev/null || echo 1`
-AC_MSG_RESULT($NR_CPUS)
-AC_SUBST(NR_CPUS)
 
 AC_CHECK_HEADERS(lzma.h)
 
@@ -67,16 +55,7 @@ if test $lzma_ok -eq 0; then
     sudo apt-get install liblzma-dev])
 fi
 
-##########################################
-# Check to enable/disable shared library
-##########################################
-AM_SHARED_LIBRARY_SUPPORT
-AM_DISTRIB_SUPPORT
-AM_COVERAGE_SUPPORT
-
-AM_GNAT_CHECK_INSTALL
-
 AC_OUTPUT(
-Makefile
-lzma.gpr
+Makefile.conf
+lzmada.gpr
 )
