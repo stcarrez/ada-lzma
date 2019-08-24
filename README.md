@@ -11,12 +11,12 @@ This is a small Ada05 library binding for the liblzma library.
 liblzma is a public domain general-purpose data compression library with
 a zlib-like API.
  
-liblzma is part of XZ Utils <http://tukaani.org/xz/>. XZ Utils includes
+liblzma is part of XZ Utils <https://tukaani.org/xz/>. XZ Utils includes
 a gzip-like command line tool named xz and some other tools. XZ Utils
 is developed and maintained by Lasse Collin.
 
 Major parts of liblzma are based on Igor Pavlov's public domain LZMA SDK
-<http://7-zip.org/sdk.html>.
+<https://7-zip.org/sdk.html>.
 
 ## Building ada-lzma
 
@@ -29,7 +29,8 @@ The installation of `liblzma` depends on your system:
 | Fedora           | `sudo yum install xz-devel`
 | NetBSD           | *pre installed (contrib/xz)*
 | FreeBSD          | *pre installed (contrib/xz)*
-| Source           | See http://tukaani.org/xz/
+| Windows          | See https://tukaani.org/xz/
+| Source           | See https://tukaani.org/xz/
 
 Build with the following commands:
 
