@@ -4,7 +4,7 @@ library project LzmAda is
    Version := "@LZMA_VERSION@";
    Library_Dir := "lib";
 
-   Library_Type : Lzma_Config.Library_Type_Type := external ("LZMA_LIBRARY_TYPE", "static");
+   Library_Type : Lzma_Config.Library_Type_Type := external ("LZMA_LIBRARY_TYPE", "@DEFAULT_LIBRARY_TYPE@");
 
    for Languages use ("Ada");
 
