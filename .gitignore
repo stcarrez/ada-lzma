@@ -14,6 +14,7 @@ lzmada.gpr
 *.xml
 autom4te.cache
 *.txt
+bin/
 lib/
 obj/
 
