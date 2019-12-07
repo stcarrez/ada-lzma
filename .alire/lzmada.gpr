@@ -1,0 +1,30 @@
+with "lzma_config";
+
+library project LzmAda is
+   Version := "1.1.0";
+   Library_Dir := "lib";
+
+   Library_Type : Lzma_Config.Library_Type_Type := external ("LZMA_LIBRARY_TYPE", "static");
+
+   for Languages use ("Ada");
+
+   for Source_Dirs use ("src");
+
+   for Library_Name use "lzmada";
+   for Library_Kind use Library_Type;
+   for Library_Version use "lib" & Project'Library_Name & ".so." & Version;
+
+   for Library_Dir use "lib/lzmada/" & Project'Library_Kind;
+   for Object_Dir use "obj/lzmada/" & Project'Library_Kind;
+
+   package Builder  renames Lzma_Config.Builder;
+   package Compiler renames Lzma_Config.Compiler;
+   package Binder   renames Lzma_Config.Binder;
+
+   package Linker is
+      for Linker_Options use ("-llzma");
+   end Linker;
+
+end LzmAda;
+
+
