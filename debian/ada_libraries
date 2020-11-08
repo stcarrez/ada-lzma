@@ -1,0 +1,1 @@
+MODE=distrib LZMA_LIBRARY_TYPE=relocatable lzmada.gpr
