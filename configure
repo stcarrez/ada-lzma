@@ -2673,8 +2673,10 @@ test -n "$GNAT" || GNAT=""""
 
   if test -n "$GNAT"; then
     GNATCHECK="$GNAT ls"
+    GNATCHECK_ARG=" system.ads"
   else
     GNATCHECK="$GNATMAKE"
+    GNATCHECK_ARG=""
   fi
 
   { $as_echo "$as_me:${as_lineno-$LINENO}: checking whether ${MAKE-make} sets \$(MAKE)" >&5
