@@ -17,5 +17,5 @@ autom4te.cache
 bin/
 lib/
 obj/
-
-							       
+*.cov
+test-res.tar
