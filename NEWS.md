@@ -1,3 +1,6 @@
+Version 1.1.1   - Feb 2021
+  - Minor build configuration fix
+
 Version 1.1.0   - Dec 2019
   - Refactor the build process
 
