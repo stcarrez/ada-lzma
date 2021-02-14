@@ -1,3 +1,9 @@
+liblzmada (1.1.1) unstable; urgency=medium
+
+  * New upstream release (fix link with shared library).
+
+ -- Stephane Carrez <Stephane.Carrez@gmail.com>  Sat, 13 Feb 2021 15:30:04 +0100
+
 liblzmada (1.1.0) unstable; urgency=medium
 
   * New upstream release.

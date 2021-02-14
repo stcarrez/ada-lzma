@@ -3,7 +3,7 @@ Upstream-Name: Ada LZMA Library Binding
 Source: https://github.com/stcarrez/ada-lzma
 
 Files: *
-Copyright: 2015-2018 Stephane Carrez
+Copyright: 2015-2021 Stephane Carrez
 License: MIT
 Comment:
  The MIT License (MIT)
