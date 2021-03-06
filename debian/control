@@ -5,15 +5,15 @@ Maintainer: Stephane Carrez <Stephane.Carrez@gmail.com>
 Build-Depends:
  debhelper (>= 10),
  dh-ada-library,
- gnat, gnat-9,
+ gnat, gnat-8,
 # This line is parsed by debian/rules.
  gprbuild (>= 2015-2),
 # 2015-2 is compatible with gnat-6
  liblzma-dev (>= 5.1)
 # 6.7 knows that -dbg packages are obsolete
 Standards-Version: 4.1.4
-Vcs-Git: https://github.com/stcarrez/ada-lzma.git -b debian-gnat-9
-Vcs-Browser: https://github.com/stcarrez/ada-lzma/tree/debian-gnat-9
+Vcs-Git: https://github.com/stcarrez/ada-lzma.git -b debian-gnat-8
+Vcs-Browser: https://github.com/stcarrez/ada-lzma/tree/debian-gnat-8
 Homepage: https://github.com/stcarrez/ada-lzma
 
 # so version = 1, ali version = 2
