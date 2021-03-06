@@ -33,7 +33,7 @@ Description: Ada LZMA Library Binding (runtime)
  a gzip-like command line tool named xz and some other tools. XZ Utils
  is developed and maintained by Lasse Collin.
 
-Package: liblzmada2-dev
+Package: liblzmada3-dev
 Architecture: any
 Depends: ${misc:Depends}, ${ada:Depends}
 # so all -dev packages indirectly Suggest: -doc.
