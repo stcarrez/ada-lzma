@@ -23,7 +23,7 @@ dnl SOFTWARE.
 
 dnl Process this file with autoconf to produce a configure script.
 
-AC_INIT([ada-lzma], [1.0])
+AC_INIT([ada-lzma],[1.1])
 AC_CONFIG_SRCDIR([src/lzma.ads])
 
 # Current release settings
@@ -52,7 +52,7 @@ if test $lzma_ok -eq 0; then
     sudo apt-get install liblzma-dev])
 fi
 
-AC_OUTPUT(
-Makefile.conf
+AC_CONFIG_FILES([Makefile.conf
 lzmada.gpr
-)
+])
+AC_OUTPUT
