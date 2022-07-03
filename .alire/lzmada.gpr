@@ -14,8 +14,8 @@ library project LzmAda is
    for Library_Kind use Library_Type;
    for Library_Version use "lib" & Project'Library_Name & ".so." & Version;
 
-   for Library_Dir use "lib/lzmada/" & Project'Library_Kind;
-   for Object_Dir use "obj/lzmada/" & Project'Library_Kind;
+   for Library_Dir use "../lib/lzmada/" & Project'Library_Kind;
+   for Object_Dir use "../obj/lzmada/" & Project'Library_Kind;
 
    package Builder  renames Lzma_Config.Builder;
    package Compiler renames Lzma_Config.Compiler;
