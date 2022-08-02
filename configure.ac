@@ -1,7 +1,7 @@
 dnl Autoconf configure script for ada-lzma
 dnl The MIT License (MIT)
 dnl 
-dnl Copyright (c) 2015, 2018, 2021 Stephane Carrez
+dnl Copyright (c) 2015, 2018, 2021, 2022 Stephane Carrez
 dnl 
 dnl Permission is hereby granted, free of charge, to any person obtaining a copy
 dnl of this software and associated documentation files (the "Software"), to deal
@@ -23,13 +23,13 @@ dnl SOFTWARE.
 
 dnl Process this file with autoconf to produce a configure script.
 
-AC_INIT([ada-lzma], [1.0])
+AC_INIT([ada-lzma],[1.1])
 AC_CONFIG_SRCDIR([src/lzma.ads])
 
 # Current release settings
 LZMA_MAJOR_VERSION=1
 LZMA_MINOR_VERSION=1
-LZMA_MICRO_VERSION=1
+LZMA_MICRO_VERSION=2
 LZMA_VERSION=$LZMA_MAJOR_VERSION.$LZMA_MINOR_VERSION.$LZMA_MICRO_VERSION
 
 # Set the version number of GtkAda
@@ -52,7 +52,7 @@ if test $lzma_ok -eq 0; then
     sudo apt-get install liblzma-dev])
 fi
 
-AC_OUTPUT(
-Makefile.conf
+AC_CONFIG_FILES([Makefile.conf
 lzmada.gpr
-)
+])
+AC_OUTPUT

@@ -1,0 +1,21 @@
+description = "Ada LZMA Library Binding"
+long-description = "A very thin Ada binding for the LZMA compression library"
+name = "lzmada"
+version = "1.1.2"
+licenses = "MIT"
+maintainers = ["Stephane.Carrez@gmail.com"]
+maintainers-logins = ["stcarrez"]
+authors = ["Stephane.Carrez@gmail.com"]
+project-files = [".alire/lzmada.gpr"]
+tags = ["compression", "lzma"]
+website = "https://gitlab.com/stcarrez/ada-lzma"
+
+[gpr-externals]
+BUILD = ["distrib", "debug", "optimize", "profile", "coverage"]
+LZMA_LIBRARY_TYPE = ["relocatable", "static", "static-pic"]
+
+[[depends-on]]
+liblzma = "*"
+
+[configuration]
+disabled = true
