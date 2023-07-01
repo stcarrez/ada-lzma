@@ -2369,7 +2369,7 @@ ac_compiler_gnu=$ac_cv_c_compiler_gnu
 # Current release settings
 LZMA_MAJOR_VERSION=1
 LZMA_MINOR_VERSION=1
-LZMA_MICRO_VERSION=2
+LZMA_MICRO_VERSION=3
 LZMA_VERSION=$LZMA_MAJOR_VERSION.$LZMA_MINOR_VERSION.$LZMA_MICRO_VERSION
 
 # Set the version number of GtkAda
