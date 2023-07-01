@@ -1,3 +1,6 @@
+Version 1.1.3   - Jul 2023
+  - Update build
+
 Version 1.1.2   - Jul 2022
   - Update build, configuration and cleanup
 
