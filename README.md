@@ -1,5 +1,6 @@
 # Ada LZMA Library Binding
 
+[![Alire](https://img.shields.io/endpoint?url=https://alire.ada.dev/badges/lzmada.json)](https://alire.ada.dev/crates/lzmada)
 [![Build Status](https://img.shields.io/endpoint?url=https://porion.vacs.fr/porion/api/v1/projects/ada-lzma/badges/build.json)](https://porion.vacs.fr/porion/projects/view/ada-lzma/summary)
 [![License](https://img.shields.io/:license-mit-blue.svg)](LICENSE)
 [![GitLab](https://img.shields.io/badge/repo-GitLab-6C488A.svg)](https://gitlab.com/stcarrez/ada-lzma)
