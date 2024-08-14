@@ -9,8 +9,11 @@ include Makefile.defaults
 build::
 	$(BUILD_COMMAND) $(GPRFLAGS) $(MAKE_ARGS)
 
+build-samples:: build
+	cd samples && $(BUILD_COMMAND) $(GPRFLAGS) $(MAKE_ARGS)
+
 # Build and run the unit tests
-test:	build
+test:	build-samples
 	tar --exclude=test.tar -cf test.tar . && \
 	bin/compress_easy test.tar test.tar.xz && \
 	bin/decompress test.tar.xz test-res.tar && \

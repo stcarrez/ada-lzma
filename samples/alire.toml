@@ -1,0 +1,19 @@
+description = "Ada LZMA Library Binding examples"
+name = "lzmada_examples"
+version = "1.1.4"
+licenses = "MIT"
+maintainers = ["Stephane.Carrez@gmail.com"]
+maintainers-logins = ["stcarrez"]
+authors = ["Stephane.Carrez@gmail.com"]
+project-files = ["samples.gpr"]
+tags = ["compression", "lzma"]
+website = "https://gitlab.com/stcarrez/ada-lzma"
+
+[[depends-on]]
+lzmada = "*"
+
+[configuration]
+disabled = true
+
+[[pins]]
+lzmada = { path = '..' }
