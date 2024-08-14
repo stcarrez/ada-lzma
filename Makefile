@@ -7,7 +7,7 @@ include Makefile.defaults
 
 # Build executables for all mains defined by the project.
 build::
-	$(GNATMAKE) $(GPRFLAGS) -p -Psamples.gpr $(MAKE_ARGS)
+	$(BUILD_COMMAND) $(GPRFLAGS) $(MAKE_ARGS)
 
 # Build and run the unit tests
 test:	build

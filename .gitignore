@@ -1,6 +1,5 @@
 *~
 *.log
-config.status
 CHANGES
 *.cproject
 *.gb_project
@@ -8,11 +7,8 @@ CHANGES
 *.log
 ChangeLog
 .settings
-configure.lineno
 Makefile.conf
-lzmada.gpr
 *.xml
-autom4te.cache
 *.txt
 bin/
 lib/

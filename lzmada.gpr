@@ -1,10 +1,10 @@
 with "lzma_config";
 
 library project LzmAda is
-   Version := "@LZMA_VERSION@";
+   Version := "1.1.4";
    Library_Dir := "lib";
 
-   Library_Type : Lzma_Config.Library_Type_Type := external ("LZMA_LIBRARY_TYPE", "@DEFAULT_LIBRARY_TYPE@");
+   Library_Type : Lzma_Config.Library_Type_Type := external ("LZMA_LIBRARY_TYPE", "static");
 
    for Languages use ("Ada");
 
@@ -13,14 +13,6 @@ library project LzmAda is
    for Library_Name use "lzmada";
    for Library_Kind use Library_Type;
    for Library_Version use "lib" & Project'Library_Name & ".so." & Version;
-
-   case Library_Type is
-      when "relocatable" =>
-        for Library_Options use ("-llzma");
-
-      when others =>
-        null;
-   end case;
 
    for Library_Dir use "lib/lzmada/" & Project'Library_Kind;
    for Object_Dir use "obj/lzmada/" & Project'Library_Kind;
