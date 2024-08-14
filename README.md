@@ -44,6 +44,8 @@ The installation of `liblzma` depends on your system:
 
 ## Build with Alire
 
+To use lzmada in your project, use the following command:
+
 ```
 alr with lzmada
 ```
