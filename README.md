@@ -8,6 +8,14 @@
 
 This is a small Ada05 library binding for the liblzma library.
 
+## Version 1.1.4   - Under development
+  - Cleanup build environment to drop configure
+
+## Version 1.1.3   - Jul 2023
+  - Update build
+
+[List all versions](https://gitlab.com/stcarrez/ada-lzma/blob/master/NEWS.md)
+
 ## About liblzma
 
 liblzma is a public domain general-purpose data compression library with
@@ -33,6 +41,12 @@ The installation of `liblzma` depends on your system:
 | FreeBSD          | *pre installed (contrib/xz)*
 | Windows          | See https://tukaani.org/xz/
 | Source           | See https://tukaani.org/xz/
+
+## Build with Alire
+
+```
+alr with lzmada
+```
 
 Build with the following commands:
 

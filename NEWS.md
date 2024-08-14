@@ -1,3 +1,6 @@
+Version 1.1.4   - Under development
+  - Cleanup build environment to drop configure
+
 Version 1.1.3   - Jul 2023
   - Update build
 
