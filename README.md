@@ -35,7 +35,6 @@ The installation of `liblzma` depends on your system:
 
 Build with the following commands:
 
-    ./configure
     make
 
 ## Installation
