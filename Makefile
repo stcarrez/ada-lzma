@@ -1,3 +1,11 @@
+NAME=lzmada
+VERSION=1.1.4
+
+DIST_DIR=ada-lzma-$(VERSION)
+DIST_FILE=ada-lzma-$(VERSION).tar.gz
+
+MAKE_ARGS += -XLZMA_BUILD=$(BUILD)
+
 -include Makefile.conf
 
 STATIC_MAKE_ARGS = $(MAKE_ARGS) -XLZMA_LIBRARY_TYPE=static
