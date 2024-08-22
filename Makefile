@@ -34,4 +34,4 @@ install_samples:
 	cp -p $(srcdir)/samples.gpr $(DESTDIR)$(samplesdir)
 	cp -p $(srcdir)/config.gpr $(DESTDIR)$(samplesdir)
 
-$(eval $(call ada_library,lzmada))
+$(eval $(call ada_library,lzmada,.))
