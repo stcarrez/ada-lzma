@@ -8,11 +8,8 @@
 
 This is a small Ada05 library binding for the liblzma library.
 
-## Version 1.1.4   - Under development
+## Version 1.1.4   - Aug 2024
   - Cleanup build environment to drop configure
-
-## Version 1.1.3   - Jul 2023
-  - Update build
 
 [List all versions](https://gitlab.com/stcarrez/ada-lzma/blob/master/NEWS.md)
 
