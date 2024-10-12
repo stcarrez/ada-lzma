@@ -15,7 +15,9 @@ include Makefile.defaults
 
 # Build executables for all mains defined by the project.
 build::
+ifeq ($(HAVE_ALIRE),yes)
 	$(BUILD_COMMAND) $(GPRFLAGS) $(MAKE_ARGS)
+endif
 
 build-samples:: build
 	cd samples && $(BUILD_COMMAND) $(GPRFLAGS) $(MAKE_ARGS)
