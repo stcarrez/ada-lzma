@@ -1,5 +1,5 @@
 NAME=lzmada
-VERSION=1.1.4
+VERSION=1.1.5
 
 DIST_DIR=ada-lzma-$(VERSION)
 DIST_FILE=ada-lzma-$(VERSION).tar.gz
@@ -37,3 +37,4 @@ install_samples:
 	cp -p $(srcdir)/config.gpr $(DESTDIR)$(samplesdir)
 
 $(eval $(call ada_library,lzmada,.))
+$(eval $(call alire_publish,.,lz/lzmada,lzmada-$(VERSION).toml))
